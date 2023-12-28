@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter temperature"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/unitSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputEditText"
+        android:layout_marginTop="16dp"
+        android:entries="@array/temperature_units"
+        android:prompt="@string/select_unit" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/unitSpinner"
+        android:layout_marginTop="16dp"
+        android:text="Convert"
+        android:onClick="convertTemperature" />
+
+
+
+    <TextView
+        android:id="@+id/celsiusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fahrenheitTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/celsiusTextView"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/kelvinTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fahrenheitTextView"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textStyle="bold" />
+
+</RelativeLayout>
